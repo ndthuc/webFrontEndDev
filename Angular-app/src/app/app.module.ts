@@ -17,6 +17,9 @@ import { ProductsComponent } from './components/products/products.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { ForgetPassComponent } from './components/forget-pass/forget-pass.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { SettingsComponent } from './components/settings/settings.component';
     ProductsComponent,
     DashboardComponent,
     ProfileComponent,
-    SettingsComponent
+    SettingsComponent,
+    LoginComponent,
+    RegisterComponent,
+    ForgetPassComponent
   ],
   imports: [
     BrowserModule,
