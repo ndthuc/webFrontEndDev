@@ -5,9 +5,9 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { EmployeesComponent } from './components/employees/employees.component';
-import { ProductsComponent } from './components/products/products.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ForgetPassComponent } from './components/forget-pass/forget-pass.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 const routes: Routes = [
@@ -32,16 +32,16 @@ const routes: Routes = [
     component: EmployeesComponent
   },
   {
-    path: "products",
-    component: ProductsComponent
-  },
-  {
     path: "profile",
     component: ProfileComponent
   },
   {
     path: "help",
     component: ForgetPassComponent
+  },
+  {
+    path: "home",
+    component: HomeComponent
   },
   {
     path: "",

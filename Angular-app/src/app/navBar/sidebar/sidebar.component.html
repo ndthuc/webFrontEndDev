@@ -1,0 +1,32 @@
+<!-- <mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <p>Auto-resizing sidenav</p>
+    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+    <button (click)="showFiller = !showFiller" mat-raised-button>
+      Toggle extra text
+    </button>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
+  </div>
+
+</mat-drawer-container> -->
+
+<mat-drawer-container id="container" style="width: 100%; height: 100vh; background-color: #3E4350">
+  <!-- set property #drawer to mat-drawer-->
+  <mat-drawer #drawer mode="side" id="nav-left-container" [opened]="isDesktopView">
+    
+    <div class="list-buttons" *ngFor="let button of buttons">
+      <mat-divider class="divider" *ngIf="button.check == '0'"></mat-divider>
+      <button mat-button class="display-button" (click)="switchHome(button)" [routerLink] = "">
+        <mat-icon>{{button.icon}}</mat-icon>
+      </button>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content id="details">
+    <app-login></app-login>
+  </mat-drawer-content>
+</mat-drawer-container>

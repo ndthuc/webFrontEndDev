@@ -1,0 +1,36 @@
+#container {
+  width: 100vw;
+  height: 100vh;
+}
+
+#nav-left-container {
+  width: 10vh;
+  text-align: center;
+}
+.list-buttons {
+  display: block;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.display-button {
+  padding: 1vh .5vw;
+  border-radius: 0;
+  min-width: 0;
+  width: 100%;
+}
+
+.divider {
+  box-sizing: border-box;
+  padding: 0 .5vw;
+  margin: .3vw;
+}
+
+#details {
+  width: 96vw auto;
+  max-width: 100vw;
+}
+
+#content {
+    margin-left: 2em;
+}
