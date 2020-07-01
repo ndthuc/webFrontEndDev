@@ -103,4 +103,8 @@ export class AuthService {
   
     })
   }
+
+  signUpWithNode(email, password){
+
+  }
 }

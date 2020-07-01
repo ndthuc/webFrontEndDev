@@ -31,12 +31,13 @@ export class RegisterComponent implements OnInit {
     });
   }
   onSubmit(){
-    let acc = new Account();
+    let message = 'Insert Successful!!!';
+    let acc = new Account(); //voi class
     //lay thông tin dữ liệu nhập trên form
     acc.email = this.registerForm.controls["email"].value;
     acc.password = this.registerForm.controls["password"].value;
     console.log(acc);
-    this.accService.insertAccount(acc).subscribe(data=>{console.log(data)});
+    this.accService.insertUser(acc, message).subscribe(data=>{console.log(data)});
   }
 
 }

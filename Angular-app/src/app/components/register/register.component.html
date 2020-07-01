@@ -21,7 +21,7 @@
                 <div class="form-group">
                     <input type="password" class="form-control form-control-user" placeholder="Password" formControlName="password" #userPwd required>                  
                 </div>
-                <input type="submit" class="btn btn-primary btn-user btn-block" value=" Create Account on Node"/>
+                <input type="submit" class="btn btn-primary btn-user btn-block" (click) = "authService.signUpWithNode(userEmail.value, userPwd.value)" value=" Create Account on Node"/>
                 <a class="btn btn-primary btn-user btn-block" (click)="authService.SignUp(userEmail.value, userPwd.value)">
                   Register Account
                 </a>

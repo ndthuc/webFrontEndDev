@@ -10,7 +10,7 @@ import { HttpClient } from "@angular/common/http";
 export class AccountService {
 
   constructor(private http: HttpClient) { }
-  insertAccount(acc:Account): Observable<Account> {
-    return this.http.post<Account>('http://localhost:8000/api/acc/insert/', acc);
+  insertUser(acc:Account, message:string): Observable<Account> {
+    return this.http.post<Account>('http://localhost:8000/api/users/insert/', {acc, message});
   }
 }

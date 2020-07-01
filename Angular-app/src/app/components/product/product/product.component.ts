@@ -40,6 +40,7 @@ export class ProductComponent implements OnInit {
 
   onSubmit(productForm: NgForm){
     let productData = Object.assign({}, productForm.value);
+    delete productData.id;
 
     if (productForm.value.id == null) {
       this.firestore.collection('products').add(productData);
