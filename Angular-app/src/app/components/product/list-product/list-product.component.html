@@ -1,0 +1,30 @@
+<!-- <p>list-product works!</p> -->
+
+<input class="form-control" type="text" name="search" id="search" [(ngModel)] = "keywordTxt" placeholder="Enter your keyword">
+
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Brand</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let product of productList|filter: keywordTxt">
+            <td (click) = "updateProductData(product)">{{product.productID}}</td>
+            <td (click) = "updateProductData(product)">{{product.productName}}</td>
+            <td (click) = "updateProductData(product)">{{product.category}}</td>
+            <td (click) = "updateProductData(product)">{{product.price}}</td>
+            <td (click) = "updateProductData(product)">{{product.quantity}}</td>
+            <td (click) = "updateProductData(product)">{{product.brand}}</td>
+            <td>
+                <button style="background-color: red;"
+                (click) = "deleteProduct(product.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

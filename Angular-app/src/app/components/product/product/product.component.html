@@ -1,0 +1,39 @@
+<!-- <p>product works!</p> -->
+<form #productForm="ngForm" autocomplete="off" (submit)="onSubmit(productForm)">
+    <input type="hidden" name="id" #id="ngModel" [(ngModel)]="productService.formData.id">
+    <div class="form-group">
+        <input name="productName" #name="ngModel" [(ngModel)]="productService.formData.productName" class="form-control"
+            placeholder="Name" required>
+            <div *ngIf="name.invalid && name.touched" class="validation-error">This field is required.</div>
+    </div>
+    <div class="form-group">
+        <input name="productID" #productID="ngModel" [(ngModel)]="productService.formData.productID" class="form-control"
+            placeholder="ID" required>
+        <div *ngIf="productID.invalid && productID.touched" class="validation-error">This field is required.</div>
+    </div>
+    <div class="form-group">
+        <input type="text" name="brand" #brand="ngModel" [(ngModel)]="productService.formData.brand"
+            class="form-control" placeholder="Brand" required>
+        <div *ngIf="brand.invalid && brand.touched" class="validation-error">This field is required.</div>
+    </div>
+    <div class="form-group">
+        <input name="category" #category="ngModel" [(ngModel)]="productService.formData.category" class="form-control"
+            placeholder="Category" required>
+        <div *ngIf="category.invalid && category.touched" class="validation-error">This field is required.</div>
+    </div>
+
+    <div class="form-group">
+        <input type="number" name="price" #price="ngModel" [(ngModel)]="productService.formData.price" class="form-control"
+            placeholder="Price" required>
+        <!-- <div *ngIf="price.invalid && price.touched" class="validation-error">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+        <input type="number" name="quantity" #quantity="ngModel" [(ngModel)]="productService.formData.quantity" class="form-control"
+            placeholder="Quantity" required>
+        <!-- <div *ngIf="quantity.invalid && quantity.touched" class="validation-error">This field is required.</div> -->
+    </div>
+    <div class="form-group">
+        <button type="submit" [disabled]="productForm.invalid" class="btn btn-lg btn-block btn-info">SUBMIT</button>
+    </div>
+
+</form>

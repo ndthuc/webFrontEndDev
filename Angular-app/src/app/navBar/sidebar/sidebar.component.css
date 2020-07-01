@@ -1,4 +1,4 @@
-#container {
+/* #container {
   width: 100vw;
   height: 100vh;
 }
@@ -33,4 +33,9 @@
 
 #content {
     margin-left: 2em;
+} */
+
+#accordionSidebar{
+  height: 100%;
+  background-color: darkgray;
 }

@@ -1,1 +1,40 @@
 <!-- <p>profile works!</p> -->
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+  <div class="inner-adjust">
+
+    <div class="pt-3 pb-2 mb-3 border-bottom">
+      <h1 class="h2">User Profile</h1>
+    </div>
+    <!-- Show user data when logged in -->
+    <div class="row">
+      <div class="col-md-4">
+        <img class="align-self-start mr-5 img-thumbnail rounded-circle" style="width: 150px; height: 150px;"
+        src="{{(authService.userData.photoURL) ? authService.userData.photoURL : '/assets/dummy-user.png'}}"
+        alt="{{authService.userData.displayName}}">
+      </div>
+      <div class="col-md-8">
+        <p>User Name: <strong>{{(authService.userData.displayName) ? authService.userData.displayName : 'User'}}</strong>
+        </p>
+        <!-- <p>User ID: <strong>{{authService.userData.uid}}</strong></p> -->
+        <p>Email: <strong>{{authService.userData.email}}</strong></p>
+        <p>Email Verified: <strong>{{authService.userData.emailVerified}}</strong></p>
+      </div>
+    </div>
+
+    
+
+    
+    <!-- <div class="row">
+      <div class="col-md-12">
+        <div class="media">
+
+          <hr>
+          <div class="media-body">
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+  </div>
+</main>

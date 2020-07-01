@@ -9,6 +9,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 import { EmployeesComponent } from './components/employees/employees.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ProfileComponent } from './components/profile/profile.component';
@@ -19,6 +21,8 @@ import { ForgetPassComponent } from './components/forget-pass/forget-pass.compon
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavigationComponent } from './navBar/navigation/navigation.component';
 import { SidebarComponent } from './navBar/sidebar/sidebar.component';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { ToastrModule } from 'ngx-toastr';
 
 
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -35,8 +39,18 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {MatTableModule} from '@angular/material/table';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+
+
 import { HomeComponent } from './components/home/home.component';
 import { LoginIconComponent } from './components/login-icon/login-icon.component';
+import { ListProductComponent } from './components/product/list-product/list-product.component';
+import { ProductComponent } from './components/product/product/product.component';
+import { VerifyEmailComponent } from './components/verify-email/verify-email.component';
+import { UserComponent } from './components/user/user.component';
+import { MembersComponent } from './components/members/members.component';
+import { ProductService } from './shared/services/product.service';
+import { AuthService } from './shared/services/auth.service';
 
 
 
@@ -53,7 +67,12 @@ import { LoginIconComponent } from './components/login-icon/login-icon.component
     NavigationComponent,
     SidebarComponent,
     HomeComponent,
-    LoginIconComponent
+    LoginIconComponent,
+    ListProductComponent,
+    ProductComponent,
+    VerifyEmailComponent,
+    UserComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +81,7 @@ import { LoginIconComponent } from './components/login-icon/login-icon.component
     AngularFirestoreModule,
     AngularFireAuthModule,
     BrowserAnimationsModule,
+    HttpClientModule,
 
     MatSidenavModule,
     MatToolbarModule,
@@ -73,14 +93,17 @@ import { LoginIconComponent } from './components/login-icon/login-icon.component
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    Ng2SearchPipeModule,
+    ToastrModule.forRoot(),
 
     MatCardModule,
     MatButtonModule,
     MatGridListModule,
     MatTableModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  providers: [ProductService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
